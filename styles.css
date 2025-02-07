@@ -7,28 +7,37 @@ header{
   display: flex;
   flex-direction: column;
   padding: 2vh 2vw;
-  background-color:red
+  background-color:rgb(255, 112, 112)
+}
+header h1{
+  font-size: calc(2px + 4vw);
+  color: rgb(255, 248, 239)
+}
+header p{
+  font-size: calc(2px + 2vw);
+  color: rgb(255, 248, 239);
 }
 footer{
   padding: 2vh 1vw;
-  background-color: red;
+  background-color: rgb(255, 112, 112);
+  font-size: calc(2px + 1.3vw);
 }
 
 #body-wrapper{
   width: 80vw;
   margin: 0 auto;
-  background-color:aquamarine;
 }
 
 #main-nav-container{
   width: 100%;
   display: flex;
   flex-direction: row;
+  height: 100vh;
 }
 
 nav{
   width: 30%;
-  background-color: cadetblue;
+  background-color: rgb(136, 211, 255);
 }
 nav ul{
   height: 100%;
@@ -41,31 +50,44 @@ nav ul{
   justify-content: space-between;
 }
 nav li{
-  padding: 1vh 0;
+  padding: 3vh 0;
 }
 nav li:hover{
-  background-color:aqua;
+  background-color:rgb(74, 255, 255);
+}
+nav a{
+  text-decoration: none;
 }
 
 main{
   width: 70%;
   display: flex;
   flex-direction: column;
-  background-color: bisque;
+  background-color: rgb(255, 248, 239);
   padding: 2vh 2vw;
+  height: 100%;
 }
-main p{
+main p, main li{
   font-size: calc(2px + 1.5vw);
+  margin-bottom: 2vh;
 }
 main h3{
   text-align: center;
-  font-size: calc(2px + 2vw);
-  text-decoration: underline;
-  padding-bottom: 2vh;
+  font-size: calc(2px + 4vw);
+  margin-bottom: 1vh;
+  font-family: 'Dancing Script', serif;
+  font-weight: bold;
 }
 main h4{
   font-size: calc(2px + 1.7vw);
 }
+main h5{
+  font-size: calc(2px + 1.4vw);
+}
+main ul{
+  margin-bottom: 5vh;
+}
+
 img{
   max-width: 100%;
   height: auto;
@@ -73,4 +95,90 @@ img{
 #profile-image-container{
   width: 40%;
   margin: 1vh auto;
+}
+#education-list{
+  list-style-type: none;
+  text-align: center;
+  padding-left: 0;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.negative{
+  color: red;
+}
+
+#calculator{
+  width:50%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  background-color: rgb(210, 210, 210);
+  justify-content: space-between;
+  padding: 2vh 2vw;
+  border: 0.2vw dashed    black;
+  border-radius: 1vw;
+  font-family: monospace;
+}
+#calculator input{
+  border-radius: 0.4vw;
+}
+#number-container{
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#number-container *{
+  margin: 1vh 0;
+}
+#calculator-output{
+  overflow: hidden;
+}
+#button-container{
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#calculator button{
+  width: 40%;
+  height: 25%;
+  border-radius: 1vw;
+  font-size: calc(1px + 1vw);
+  transition: background-color 0.1s ease-in-out;
+}
+#calculator button:hover{
+  background-color: rgb(255, 179, 143);
+}
+#calculator label, input{
+  font-size: calc(1px + 1.2vw);
+}
+
+
+@media screen and (max-width: 800px){
+  header{
+    align-items: center;
+}
+
+  #main-nav-container{
+    flex-direction: column;
+  }
+  nav{
+    width: 100%;
+  }
+  nav ul{
+    flex-direction: row;
+    padding: 1vh 1vw;
+  }
+  nav li{
+    padding: 1vh 2vw;
+  }
+  main{
+    width: 100%;
+  }
+
 }
